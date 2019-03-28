@@ -6,7 +6,7 @@ body {
 .container {
   display: flex;
   flex-direction: row;
-  width: 70%;
+  width: 90%;
   height: auto;
   margin: auto;
   border: 1px solid #ccc;
@@ -23,13 +23,15 @@ body {
 
 .container .info-profile .img-wrap {
   height: 15em;
+  width: 10em;
 }
 
 .container .info-profile .img-wrap .img-profile {
   border: 1px solid #fff;
   margin-top: 2em;
-  width: 10em;
-  height: 10em;
+  max-width: 100%; 
+  display:block; 
+  height: auto;
   border-radius: 5em;
   -webkit-border-radius: 5em;
   -moz-border-radius: 5em;
@@ -163,4 +165,135 @@ h1, h3 {
 .content-profile .container-profile .work-item .work-content .work-desc {
   font-size: 0.9em;
   line-height: 1.3em;
+}
+
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  .container {
+    width: 70%;
+  }
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  .container {
+    width: 70%;
+  }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .info-profile {
+    width: 100%;
+  }
+
+  .container .info-profile .info {
+    align-self: center;
+  }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .info-profile {
+    width: 100%;
+  }
+
+  .container .info-profile .info {
+    align-self: center;
+  }
+
+  .content-profile {
+    width: 100%;
+  }
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .info-profile {
+    width: 100%;
+  }
+
+  .container .info-profile .info {
+    align-self: center;
+  }
+
+  .content-profile {
+    width: 100%;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .info-profile {
+    width: 100%;
+  }
+
+  .container .info-profile .info {
+    align-self: center;
+  }
+
+  .content-profile {
+    width: 100%;
+  }
+  
 }
